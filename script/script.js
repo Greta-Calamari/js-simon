@@ -56,7 +56,7 @@ for(i = 0; i < 5; i++){
 // Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati.
 
 function controlloRisultati(){
-    let check = false;
+    // gli voglio dire che se i numeri che ha messo l'utente sono uguali ai numeri richiesti allora scrivi bla bla....
     if(numeriUtente.includes(numeri)){
         document.getElementById("vittoria").innerHTML = "Vittoria";
         
