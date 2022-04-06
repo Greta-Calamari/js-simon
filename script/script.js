@@ -32,14 +32,23 @@
      
      
     setTimeout(function(){
-        document.remove(innerHTML);
+        
         for(i = 0; i < 5; i++){
+            let numeriUtente = [];
             let ricordaNumeri = prompt('inserisci i numeri che hai visto');
-
+            numeriUtente.push(ricordaNumeri);
+            console.log(numeriUtente);
+            // adesso ho i numeri che ha pushato l'utente
 
         }
 
+
+
+
     },2000);
+
+
+    
 
     
     
