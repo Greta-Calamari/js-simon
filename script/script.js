@@ -32,20 +32,23 @@ while(numeri.length < 5){
     
 
 console.log(numeri);
-        
+
+setTimeout(function() {
+    document.getElementById('numeri').innerHTML = '';
+}, 2000);
      
 setTimeout(function(){
-        
-for(i = 0; i < 5; i++){
-    // testo = classList.add('d-none')
-    let ricordaNumeri = parseInt(prompt('inserisci i numeri che hai visto'));
-    numeriUtente.push(ricordaNumeri);
-    console.log(numeriUtente);
-    // adesso ho i numeri che ha pushato l'utente
+    
+    for(i = 0; i < 5; i++){
+        // testo = classList.add('d-none')
+        let ricordaNumeri = parseInt(prompt('inserisci i numeri che hai visto'));
+        numeriUtente.push(ricordaNumeri);
+        console.log(numeriUtente);
+        // adesso ho i numeri che ha pushato l'utente
 
     }
 
-},2000);
+},3000);
 
 
 
@@ -57,10 +60,21 @@ for(i = 0; i < 5; i++){
 
 function controlloRisultati(){
     // gli voglio dire che se i numeri che ha messo l'utente sono uguali ai numeri richiesti allora scrivi bla bla....
-    if(numeriUtente.includes(numeri)){
-        document.getElementById("vittoria").innerHTML = "Vittoria";
+    for(let i =0; i < numeri.length; i++){
         
-    }else{
+        if(numeriUtente.includes(numeri[i])){
+        
+            let vittoria = document.getElementById('vittoria');
+            console.log('vittoria');
+            
+        }else{
+            let sconfitta = document.getElementById('vittoria');
+            console,log('sconfitta');
+            
+
+    
+        }
+
 
     }
 } 
