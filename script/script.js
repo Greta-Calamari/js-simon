@@ -21,20 +21,23 @@ while(numeri.length < 5){
     let random = Math.floor(Math.random() * 100) + 1;
             
         if(!numeri.includes(random)){
-            numeri.push(random);  
+            numeri.push(random);
             let testo =`<div>${random}</div>`;
             console.log(testo);
-            document.getElementById('numeri').innerHTML = numeri;
-        } 
+            document.getElementById('numeri').innerHTML = numeri;  
             
-}
+        } 
+        
+    }
     
+
 console.log(numeri);
         
      
 setTimeout(function(){
         
 for(i = 0; i < 5; i++){
+    // testo = classList.add('d-none')
     let ricordaNumeri = parseInt(prompt('inserisci i numeri che hai visto'));
     numeriUtente.push(ricordaNumeri);
     console.log(numeriUtente);
@@ -45,11 +48,16 @@ for(i = 0; i < 5; i++){
 },2000);
 
 
+
+// creo il risultato
+// Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati.
+
 // creo il risultato
 // Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati.
 
 function controlloRisultati(){
-    if(numeriUtente === numeri){
+    let check = false;
+    if(numeriUtente.includes(numeri)){
         document.getElementById("vittoria").innerHTML = "Vittoria";
         
     }else{
