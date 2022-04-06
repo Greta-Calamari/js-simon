@@ -51,11 +51,11 @@
 function controlloRisultati(){
     if(numeriUtente === numeri){
         let vittoria = document.getElementById('vittoria');
-        vittoria.innerHTML = ('bravae te li sei ricordati tutti')
-        console.log(vittoria)
+        vittoria.innerHTML = ('bravae te li sei ricordati tutti');
+        console.log(vittoria);
      
 
-    }
+    }else{}
 } 
 controlloRisultati();
 
