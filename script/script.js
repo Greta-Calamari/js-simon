@@ -4,45 +4,45 @@
 
 // utility
  function getRandomInt(min, max) { 
-     min = Math.ceil(min);
-     max = Math.floor(max);
-     return Math.floor(Math.random() * (max - min) + min);
-     }
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min) + min);
+}
      
     //  funzione che genera 5 numeri unici e li mette nell'array
      
-     let numeri = [];
+let numeri = [];
+let numeriUtente = [];
      
     
 
-        while(numeri.length < 5){
+while(numeri.length < 5){
             
-           let random = Math.floor(Math.random() * 100) + 1;
+    let random = Math.floor(Math.random() * 100) + 1;
             
-           if(!numeri.includes(random)){
-               numeri.push(random);  
-               let testo =`<div>${random}</div>`;
-               console.log(testo);
-               document.getElementById('numeri').innerHTML = numeri;
-           } 
-   
-        }
+        if(!numeri.includes(random)){
+            numeri.push(random);  
+            let testo =`<div>${random}</div>`;
+            console.log(testo);
+            document.getElementById('numeri').innerHTML = numeri;
+        } 
+            
+}
     
-     console.log(numeri);
-     
-     
-    setTimeout(function(){
+console.log(numeri);
         
-        for(i = 0; i < 5; i++){
-            let numeriUtente = [];
-            let ricordaNumeri = parseInt(prompt('inserisci i numeri che hai visto'));
-            numeriUtente.push(ricordaNumeri);
-            console.log(numeriUtente);
-            // adesso ho i numeri che ha pushato l'utente
+     
+setTimeout(function(){
+        
+for(i = 0; i < 5; i++){
+    let ricordaNumeri = parseInt(prompt('inserisci i numeri che hai visto'));
+    numeriUtente.push(ricordaNumeri);
+    console.log(numeriUtente);
+    // adesso ho i numeri che ha pushato l'utente
 
-        }
+    }
 
-    },2000);
+},2000);
 
 
 // creo il risultato
@@ -52,9 +52,9 @@ function controlloRisultati(){
     if(numeriUtente === numeri){
         document.getElementById("vittoria").innerHTML = "Vittoria";
         
-     
+    }else{
 
-    }else{}
+    }
 } 
 controlloRisultati();
 
