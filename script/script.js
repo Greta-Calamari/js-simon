@@ -35,17 +35,30 @@
         
         for(i = 0; i < 5; i++){
             let numeriUtente = [];
-            let ricordaNumeri = prompt('inserisci i numeri che hai visto');
+            let ricordaNumeri = parseInt(prompt('inserisci i numeri che hai visto'));
             numeriUtente.push(ricordaNumeri);
             console.log(numeriUtente);
             // adesso ho i numeri che ha pushato l'utente
 
         }
 
-
-
-
     },2000);
+
+
+// creo il risultato
+// Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati.
+
+function controlloRisultati(){
+    if(numeriUtente === numeri){
+        let vittoria = document.getElementById('vittoria');
+        vittoria.innerHTML = ('bravae te li sei ricordati tutti')
+        console.log(vittoria)
+     
+
+    }
+} 
+controlloRisultati();
+
 
 
     
