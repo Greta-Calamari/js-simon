@@ -13,24 +13,27 @@
      
      let numeri = [];
      
-    
-     while(numeri.length < 5){
-         
-        let random = Math.floor(Math.random() * 100) + 1;
-         
-        if(numeri.indexOf(random) === -1){
-            numeri.push(random);  
-            let testo =`<div>${random}</div>`;
-            console.log(testo)
-            document.getElementById('numeri').innerHTML = numeri;
-        } 
+    function pippo(){
 
-     }
+        while(numeri.length < 5){
+            
+           let random = Math.floor(Math.random() * 100) + 1;
+            
+           if(numeri.indexOf(random) === - 1){
+               numeri.push(random);  
+               let testo =`<div>${random}</div>`;
+               console.log(testo)
+               document.getElementById('numeri').innerHTML = numeri;
+           } 
+   
+        }
+    }
      console.log(numeri);
+     pippo();
      
     setTimeout(function(){
         
-        let ricordaNumeri = prompt('inserisci i numeri che hai visto')
+        let ricordaNumeri = prompt('inserisci i numeri che hai visto');
 
     },2000);
 
