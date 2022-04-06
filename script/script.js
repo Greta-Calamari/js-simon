@@ -13,7 +13,7 @@
      
      let numeri = [];
      
-     
+    
      while(numeri.length < 5){
          
         let random = Math.floor(Math.random() * 100) + 1;
@@ -28,6 +28,11 @@
      }
      console.log(numeri);
      
+    setTimeout(function(){
+        
+        let ricordaNumeri = prompt('inserisci i numeri che hai visto')
+
+    },2000);
 
     
     
