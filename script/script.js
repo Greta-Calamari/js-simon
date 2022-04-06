@@ -33,7 +33,10 @@
      
     setTimeout(function(){
         pippo()
-        let ricordaNumeri = prompt('inserisci i numeri che hai visto');
+        for(i = 0; i < 5; i++){
+
+            let ricordaNumeri = prompt('inserisci i numeri che hai visto');
+        }
 
     },2000);
 
