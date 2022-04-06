@@ -12,11 +12,19 @@
     //  funzione che genera 5 numeri unici e li mette nell'array
      
      let numeri = [];
-     let testo = '';
+     
      
      while(numeri.length < 5){
-         let random = Math.floor(Math.random() * 100) + 1;
-         if(numeri.indexOf(random) === -1) numeri.push(random);
+         
+        let random = Math.floor(Math.random() * 100) + 1;
+         
+        if(numeri.indexOf(random) === -1){
+            numeri.push(random);  
+            let testo =`<div>${random}</div>`;
+            console.log(testo)
+            document.getElementById('numeri').innerHTML = numeri;
+        } 
+
      }
      console.log(numeri);
      
