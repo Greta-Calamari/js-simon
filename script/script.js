@@ -2,12 +2,6 @@
 // Dopo 30 secondi l'utente deve inserire, uno alla volta, i numeri che ha visto precedentemente, tramite il prompt().
 // Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati.
 
-// utility
- function getRandomInt(min, max) { 
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min) + min);
-}
      
     //  funzione che genera 5 numeri unici e li mette nell'array
      
@@ -29,13 +23,16 @@ while(numeri.length < 5){
         } 
         
     }
+    // let numeriGen = document.getElementById('numeri');
+    // numeriGen.innerHTML = numeri.join(' - ')
+
     
 
 console.log(numeri);
 
 setTimeout(function() {
     document.getElementById('numeri').innerHTML = '';
-}, 2000);
+}, 3000);
      
 setTimeout(function(){
     
@@ -48,7 +45,7 @@ setTimeout(function(){
 
     }
 
-},3000);
+},5000);
 
 
 
@@ -60,29 +57,46 @@ setTimeout(function(){
 
 function controlloRisultati(){
     // gli voglio dire che se i numeri che ha messo l'utente sono uguali ai numeri richiesti allora scrivi bla bla....
-    for(let i =0; i < numeri.length; i++){
-        
+    for(let i = 0; i < numeri.length; i++){
+        let numeriAzzeccati = [];
         if(numeriUtente.includes(numeri[i])){
-        
-            let vittoria = document.getElementById('vittoria');
-            console.log('vittoria');
+            numeriAzzeccati.push(numeri);
             
-        }else{
-            let sconfitta = document.getElementById('vittoria');
-            console,log('sconfitta');
-            
-
-    
         }
+        if(numeriUtente.length === numeriAzzeccati.length){
+            const vittoria = document.getElementById('vittoria');
+            vittoria.innerText =`hai vinto`;
+        }else{
+            const numeriUtenteElm = document.getElementById('numeri-utente');
+            const numeriUtenteindovinatiElm = document.getElementById
+            ('numeri-corrispondenti');
+            numeriUtenteElm.innerHTML =`numeri inseriti da te: ${numeriUtente.join(' - ')}`;
+            numeriUtenteindovinatiElm.innerHTML = `perso perchè hai indovinato solo questi numeri: ${numeriAzzeccati.join(' - ')}`
+            
+            
 
 
+        }
+            
     }
+        
 } 
+
+
 controlloRisultati();
 
 
     
 
-    
+    // const timer = setTimeout(()=>{
+    //     const numeriutente = [];
+    //     while(!numeriUtente.length < 5){
+    //         const num = parseInt(prompt('inserisci i numeri uno per volta'));
+    //         if(!numeriUtente.includes(num){
+    //             numeriUtente.push(num);
+    //         }
+
+    //     }
+    // },3000)
     
      
